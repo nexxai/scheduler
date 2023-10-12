@@ -31,7 +31,7 @@ export default function Form(props) {
     }
 
     setError("");
-    props.onSave(name, interviewer.id);
+    props.onSave(name, interviewer);
   }
 
   return (
