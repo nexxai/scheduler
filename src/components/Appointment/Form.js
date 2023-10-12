@@ -31,7 +31,7 @@ export default function Form(props) {
     }
 
     setError("");
-    props.onSave(name, interviewer);
+    props.onSave(name, interviewer.id);
   }
 
   return (
@@ -53,7 +53,7 @@ export default function Form(props) {
         <section className="appointment__validation">{error}</section>
         <InterviewerList
           interviewers={props.interviewers}
-          value={interviewer}
+          value={interviewer.id}
           onChange={setInterviewer}
         />
       </section>
