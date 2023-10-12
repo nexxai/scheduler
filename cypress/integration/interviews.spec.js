@@ -1,4 +1,8 @@
 describe("Interviews", () => {
+  beforeEach(() => {
+    cy.visit("/api/debug/reset");
+  });
+
   it("should book an interview", () => {
     // In case API requests haven't fully loaded, set an alias to wait on (as per mentor call with Gary J)
     cy.intercept("/api/appointments").as("appointments");
